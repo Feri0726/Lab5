@@ -37,6 +37,27 @@ The only question is what shall we put into the last cell. Make a drawing and fi
 
 int main(){
 int array[10] = {25, 69, 54, 8, 77, 6, 29, 10, 3, 98};
+int changer;
+for (int i = 0; i < 10; i++){
+    printf("%d ", array[i]);
+}
+printf("\n");
+for (int i = 0; i < 10;i++){
+  changer = array[0];
+  for (int j = 0; j < 9; j++){
+    array[j] = array[j+1];
+  }
+  array[9] = changer;
+  for (int k = 0; k < 10; k++){
+    printf("%d ", array[k]);
+  }
+  printf("\n");
+
+  }
+
+
+
+  
 
   return 0;
 }
