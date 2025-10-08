@@ -22,7 +22,33 @@ Marked: 25 69 54 8 77 6 29 10 3[MIN] 98
 #include <stdio.h>
 
 int main(){
+  int array[] = {25, 69, 54, 8, 77, 6, 29, 10, 3, 98};
+  printf("Array:\t");
+  for (int i = 0; i < 10; i++){
+    printf("%d ", array[i]);
+  }
+  printf("\nThe array: ");
+  for (int i = 0; i < 10; i++){
+    printf("[%d]=%d ", i, array[i]);
+  }
+  int min = array[0];
+  int place;
+  for (int i = 0; i < 10; i++){
+    if (array[i] < min){
+      min = array[i];
+      place = i;
+    }
+  
 
-
+  }
+  printf("\nThe least: %d\n", min);
+  for (int i = 0; i < 10; i++){
+    if (array[i] == min){
+      printf("%d[MIN] ", array[i]);
+    }
+    else{
+      printf("%d ", array[i]);
+    }
+  }
   return 0;
 }

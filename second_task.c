@@ -4,6 +4,7 @@ Try the following program, what output do you expect? What do you get, why?
 
 
 //comment this and uncomment the next to proceed to the next part 
+/*
 #include <stdio.h>
 
 int main(void) {
@@ -12,7 +13,7 @@ int main(void) {
 
   printf("a=%d\nb=%d\nc=%d\n", a, b, c);
 
-  /* indexing out of bounds */
+  indexing out of bounds
   t[-1] = 0.2;
   t[10] = 0.3;
   printf("\n");
@@ -21,11 +22,9 @@ int main(void) {
 
   return 0;
 }
-
-/*
 Try the following program. What does while (true) mean?
 */
-/*
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -36,11 +35,9 @@ int main(void) {
         array[i] = i;
     i = 0;
     while (true) {
-        printf("%dth element: %d\n", i, array[i]);
+        printf("%dth e*/lement: %d\n", i, array[i]);
         i += 1;
     }
 
     return 0;
 }
-*/
-
