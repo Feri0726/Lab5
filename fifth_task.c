@@ -10,11 +10,32 @@ Write a C program that reads the data (several hours-minutes-speed triplets, unt
 
 */
 
-
 #include <stdio.h>
 
-int main(){
+int main()
+{
+  int array[3] = {1, 1, 1};
+  int idomax[24];
+  for (int i = 0; i < 24; i++)
+  {
+    idomax[i] = 0;
+  }
+  while (!(array[0] == 0 && array[1] == 0 && array[2] == 0))
+  {
+    printf("Give the time and speed");
+    scanf("%d-%d-%d", &array[0], &array[1], &array[2]);
 
-
+    if (array[2] > idomax[array[0]])
+    {
+      idomax[array[0]] = array[2];
+    }
+  }
+  for (int i = 0; i < 24; i++)
+  {
+    if (idomax[i] > 130)
+    {
+      printf("%d:00-%d:59 -> %d km/h\n", i, i, idomax[i]);
+    }
+  }
   return 0;
 }
